@@ -1,0 +1,199 @@
+/*!
+ * Start Bootstrap - Business Casual (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+//colors
+$black_50: rgba(0,0,0,1);
+$white: #fff;
+$white_90: rgba(255,255,255,1);
+$black: #000;
+$color_mountain_mist_approx: #999999;
+
+//fonts
+$font_0: Josefin Slab;
+$font_1: Helvetica Neue;
+$font_2: Helvetica;
+$font_3: Arial;
+$font_4: sans-serif;
+$font_5: Open Sans;
+
+//urls
+$background_url: asset-url('bg.png');
+
+//@extend-elements
+//original selectors
+//h1, h2, h3, h4, h5, h6
+%extend_1 {
+  text-transform: uppercase;
+  font-family: $font_0, $font_1, $font_2, $font_3, $font_4;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+body {
+  font-family: $font_5, $font_1, $font_2, $font_3, $font_4;
+  background: $background_url no-repeat center center ;
+  background-size: cover;
+}
+h1 {
+  @extend %extend_1;
+}
+h2 {
+  @extend %extend_1;
+}
+h3 {
+  @extend %extend_1;
+}
+h4 {
+  @extend %extend_1;
+}
+h5 {
+  @extend %extend_1;
+}
+h6 {
+  @extend %extend_1;
+}
+p {
+  font-size: 1.25em;
+  line-height: 1.6;
+  color: $black;
+}
+hr {
+  max-width: 400px;
+  border-color: $color_mountain_mist_approx;
+}
+.brand {
+  display: none;
+}
+.address-bar {
+  display: none;
+}
+.navbar-brand {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.navbar-nav {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+.img-full {
+  min-width: 100%;
+}
+.brand-before {
+  text-transform: capitalize;
+  margin: 15px 0;
+}
+.brand-name {
+  text-transform: capitalize;
+  margin: 0;
+  font-size: 4em;
+}
+.tagline-divider {
+  margin: 15px auto 3px;
+  max-width: 250px;
+  border-color: $color_mountain_mist_approx;
+}
+.box {
+  margin-bottom: 20px;
+  padding: 30px 15px;
+  background: $white;
+  background: $white_90;
+}
+.intro-text {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.img-border {
+  float: none;
+  margin: 0 auto 0;
+  border: $color_mountain_mist_approx solid 1px;
+}
+.img-left {
+  float: none;
+  margin: 0 auto 0;
+}
+footer {
+  background: $white;
+  background: $white_90;
+
+  p {
+    margin: 0;
+    padding: 50px 0;
+  }
+}
+@media screen and(min-width:768px) {
+  .brand {
+    display: inherit;
+    margin: 0;
+    padding: 30px 0 10px;
+    text-align: center;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 1px 1px 2px $black_50;
+    font-family: $font_0, $font_1, $font_2, $font_3, $font_4;
+    font-size: 5em;
+    font-weight: 700;
+    line-height: normal;
+    color: $white;
+  }
+  .top-divider {
+    margin-top: 0;
+  }
+  .img-left {
+    float: left;
+    margin-right: 25px;
+  }
+  .address-bar {
+    display: inherit;
+    margin: 0;
+    padding: 0 0 40px;
+    text-align: center;
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: 1px 1px 2px $black_50;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: $white;
+  }
+  .navbar {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    min-height: 0;
+  }
+  .navbar-header {
+    display: none;
+  }
+  .navbar-default {
+    border: none;
+    background: $white;
+    background: $white_90;
+  }
+  .navbar-nav {
+    display: table;
+    float: none;
+    margin: 0 auto;
+    table-layout: fixed;
+    font-size: 1.25em;
+    > li > a {
+      line-height: normal;
+    }
+  }
+  .nav > li > a {
+    padding: 35px;
+  }
+}
+@media screen and(min-width:1200px) {
+  .box:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+}
