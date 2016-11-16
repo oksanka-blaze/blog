@@ -34,6 +34,14 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'ffaker'
 
+  # Rails-tasks like migrations and compile assets
+  gem 'capistrano-rails'
+  # To work with bundler
+  gem 'capistrano-bundler'
+  # To work with Rbenv
+  gem 'capistrano-rbenv'
+  # To work with Puma
+  gem 'capistrano3-puma'
 end
 
 group :development do

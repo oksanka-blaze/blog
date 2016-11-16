@@ -1,0 +1,9 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - bundle exec cap production deploy
+  staging:
+    branch: staging
+    commands:
+      - bundle exec cap staging deploy
