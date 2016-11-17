@@ -18,8 +18,19 @@ html lang="en"
       | <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       | <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   body
+    .log-in-data.pull-right
+      - if current_user
+        | Logged in as&nbsp;
+        b= current_user.display_name
+        | &nbsp; | &nbsp;
+        = link_to "Log Out", logout_path
+      - else
+        = link_to "Sign Up", signup_path
+        | &nbsp;or&nbsp;
+        = link_to "log In", login_path
     .brand Student's Blog
     .address-bar Very cool blog!
+
     /! Navigation
     nav.navbar.navbar-default role="navigation"
       .container
@@ -36,14 +47,16 @@ html lang="en"
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav
             li
-              a href="index.html"  Home
+              =link_to 'Home', root_path
             li
-              a href="about.html"  About
+              =link_to 'About', root_path
             li
-              a href="blog.html"  Blog
+              =link_to 'Blog', root_path
             li
-              a href="contact.html"  Contact
+              =link_to 'Contact', root_path
     .container.main-content
+      .row
+        = flash_messages
       = yield
     footer
       .container

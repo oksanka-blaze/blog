@@ -1,3 +1,23 @@
 .main-content {
-  min-height:  100vh; // Viewport height, 1vh = 1% of browser’s height.
+  .box {
+    border-radius: 4px;
+    padding: 50px 15px;
+  }
+
+
+}
+
+footer {
+  display: none;
+
+}
+
+@media screen and(min-width:768px) {
+  footer {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
