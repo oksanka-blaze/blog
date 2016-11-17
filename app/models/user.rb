@@ -4,8 +4,8 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
 
-  validates_confirmation_of :password
   validates_presence_of :password
+  validates_confirmation_of :password
 
   def display_name
     return 'User' if first_name.blank? && last_name.blank?
