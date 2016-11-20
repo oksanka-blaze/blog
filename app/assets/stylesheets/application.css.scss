@@ -1,0 +1,10 @@
+/*
+ *= require_self
+ *= require theme
+ *= require custom_theme
+ *= require users
+ *= require sessions
+ *= require layout
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
