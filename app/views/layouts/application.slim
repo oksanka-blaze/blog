@@ -27,7 +27,9 @@ html lang="en"
       - else
         = link_to "Sign Up", signup_path
         | &nbsp;or&nbsp;
-        = link_to "log In", login_path
+        = link_to "Sign In", signin_path
+    - if current_user
+      = link_to 'Create New Post', new_post_path, class: 'btn  btn-lg btn-success pull-left create-new-post-button'
     .brand Student's Blog
     .address-bar Very cool blog!
 
@@ -51,12 +53,10 @@ html lang="en"
             li
               =link_to 'About', root_path
             li
-              =link_to 'Blog', root_path
+              =link_to 'Blog', posts_path
             li
               =link_to 'Contact', root_path
     .container.main-content
-      .row
-        = flash_messages
       = yield
     footer
       .container

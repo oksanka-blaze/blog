@@ -1,5 +1,7 @@
+.small-flash.text-center
+  = flash_messages
 .row
-  .box
+  .box.small-box
     h1.text-center Sign In
     = bootstrap_form_tag url: sessions_path, method: :post, html: { class: 'sign-in-form' } do |f|
       = f.email_field :email
