@@ -4,8 +4,8 @@ html lang="en"
     meta charset="utf-8" /
     meta content="IE=edge" http-equiv="X-UA-Compatible" /
     meta content="width=device-width, initial-scale=1" name="viewport" /
-    meta content="" name="description" /
-    meta content="" name="author" /
+    meta content="Students blog" name="description" /
+    meta content="Vladislav Beliaiev, Oksana Dushenkivska, Yuliia Yatsenko" name="author" /
     title Blog
     = csrf_meta_tags
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -18,20 +18,12 @@ html lang="en"
       | <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       | <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   body
-    .log-in-data.pull-right
-      - if current_user
-        | Logged in as&nbsp;
-        b= current_user.display_name
-        | &nbsp; | &nbsp;
-        = link_to "Log Out", logout_path
-      - else
-        = link_to "Sign Up", signup_path
-        | &nbsp;or&nbsp;
-        = link_to "Sign In", signin_path
-    - if current_user
-      = link_to 'Create New Post', new_post_path, class: 'btn  btn-lg btn-success pull-left create-new-post-button'
-    .brand Student's Blog
-    .address-bar Very cool blog!
+    = render 'layouts/sign_in_cell'
+    - if policy(:post).new?
+      = link_to 'Create New Post', new_post_path, class: 'btn btn-lg btn-success pull-left create-new-post-button'
+    =link_to root_path, class: 'logo-link' do
+      .brand Student's Blog
+      .address-bar Very cool blog!
 
     /! Navigation
     nav.navbar.navbar-default role="navigation"

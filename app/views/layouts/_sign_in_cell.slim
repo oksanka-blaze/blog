@@ -1,0 +1,10 @@
+.log-in-data.pull-right
+  - if policy(:page).sign_out?
+    | Logged in as&nbsp;
+    b= current_user.decorate.display_name
+    | &nbsp; | &nbsp;
+    = link_to "Sign Out", logout_path
+  - else
+    = link_to "Sign Up", signup_path
+    | &nbsp;or&nbsp;
+    = link_to "Sign In", signin_path

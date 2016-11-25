@@ -2,6 +2,11 @@
   = flash_messages
 .row
   .box
-    h1 = @post.title
-    hr
-    h5 = @post.body
+    h4 = @post.title
+    .post-content
+      = @post.body
+    .created-by-post.pull-left
+      span.created-by-title-post Created By:&nbsp;
+      span= @post.decorate.author_name
+    .created-at-post.pull-right
+      = @post.created_at.strftime('%d %b %Y %H:%M ')

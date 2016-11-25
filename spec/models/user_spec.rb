@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
     let(:user) { create(:user, first_name: 'John', last_name: 'Doe') }
 
     it 'should return correct display name' do
-      expect(user.display_name).to eq('John Doe')
+      expect(user.decorate.display_name).to eq('John Doe')
     end
   end
 
@@ -19,7 +19,7 @@ RSpec.describe User, type: :model do
     let(:user) { create(:user, first_name: '', last_name: '') }
 
     it 'should return "User" as display name' do
-      expect(user.display_name).to eq('User')
+      expect(user.decorate.display_name).to eq('User')
     end
   end
 end

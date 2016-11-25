@@ -28,8 +28,13 @@ gem 'sorcery'
 # Authorization
 gem 'pundit'
 
+# Decorators
+gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
+gem 'draper', github: 'audionerd/draper', branch: 'rails5'
+
 # Paginate
 gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
 group :development, :test do
   # Use pry for debug.
   gem 'pry-rails'

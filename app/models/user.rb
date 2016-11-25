@@ -11,9 +11,4 @@ class User < ApplicationRecord
   validates :last_name, length: { minimum: 2, maximum: 25 }, allow_blank: true
 
   has_many :posts
-
-  def display_name
-    return 'User' if first_name.blank? && last_name.blank?
-    "#{first_name} #{last_name}"
-  end
 end

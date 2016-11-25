@@ -1,9 +1,6 @@
 .row
   = flash_messages
-- @posts.each do |post|
-  .row
-    =link_to post_path(post) do
-      .box
-        h5 = post.title
-        hr
-        = post.body
+=render @posts
+
+.row.paginate-row.text-right
+  = will_paginate @posts, renderer: BootstrapPagination::Rails, previous_label: '←', next_label: '→'
