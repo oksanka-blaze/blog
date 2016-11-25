@@ -1,0 +1,11 @@
+.row
+  = link_to post_path(post) do
+    .box
+      h4= post.title
+      .post-content
+        = truncate(post.body, length: 350)
+      .created-by-post.pull-left
+        span.created-by-title-post Created By:&nbsp;
+        span= post.author_name
+      .created-at-post.pull-right
+        = post.formatted_created_at

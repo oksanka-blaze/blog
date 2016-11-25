@@ -1,5 +1,7 @@
+.small-flash.text-center
+  = flash_messages
 .row
-  .box
+  .box.small-box
     h1.text-center Sign Up
     = bootstrap_form_for(@user, html: { class: 'sign-up-form' }) do |f|
       = f.email_field :email

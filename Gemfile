@@ -22,8 +22,19 @@ gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 
-# Authentication for Rails
+# Authentication
 gem 'sorcery'
+
+# Authorization
+gem 'pundit'
+
+# Decorators
+gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
+gem 'draper', github: 'audionerd/draper', branch: 'rails5'
+
+# Paginate
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
 group :development, :test do
   # Use pry for debug.
   gem 'pry-rails'
