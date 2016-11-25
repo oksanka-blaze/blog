@@ -1,0 +1,15 @@
+.new-post-page {
+  textarea#post_body {
+    resize: vertical;
+    min-height: 150px;
+  }
+
+  input[type=submit] {
+    margin-right: 10px;
+  }
+
+  input[type=submit], .cancel-btn {
+    width: 150px;
+
+  }
+}

@@ -1,0 +1,12 @@
+.row
+  = flash_messages
+.row
+  .box
+    h4= @post.title
+    .post-content
+      = @post.body
+    .created-by-post.pull-left
+      span.created-by-title-post Created By:&nbsp;
+      span= @post.author_name
+    .created-at-post.pull-right
+      = @post.formatted_created_at
