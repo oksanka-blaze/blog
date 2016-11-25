@@ -1,5 +1,5 @@
 .log-in-data.pull-right
-  - if policy(:page).sign_out?
+  - if current_user.present?
     | Logged in as&nbsp;
     b= current_user.decorate.display_name
     | &nbsp; | &nbsp;

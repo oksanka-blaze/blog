@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20161120220432) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title",      null: false
-    t.string   "body",       null: false
+    t.text     "body",       null: false
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -35,4 +35,5 @@ ActiveRecord::Schema.define(version: 20161120220432) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
+  add_foreign_key "posts", "users"
 end

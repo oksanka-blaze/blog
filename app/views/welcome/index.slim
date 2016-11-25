@@ -1,6 +1,6 @@
 .row
   = flash_messages
-=render partial:'posts/post', collection: @posts, as: :post
+= render partial:'posts/post', collection: @posts, as: :post
 
 .row.text-center.show-more
-  =link_to 'Show More', posts_path, class: 'btn btn-lg btn-success'
+  = link_to 'Show More', posts_path, class: 'btn btn-lg btn-success'

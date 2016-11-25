@@ -6,7 +6,7 @@ RSpec.describe PostsController, type: :controller do
   context "when user NOT logged in" do
 
     describe "GET #new" do
-      it "render index page" do
+      it "redirect to index page" do
         get :new
         expect(response).to redirect_to root_path
       end
@@ -49,27 +49,31 @@ RSpec.describe PostsController, type: :controller do
     end
 
     context "with valid attributes" do
+      let(:post_valid_params) { FactoryGirl.attributes_for(:post) }
+
       it "creates new object" do
         expect{
-          post :create, params: { post: FactoryGirl.attributes_for(:post) }
+          post :create, params: { post: post_valid_params }
         }.to change(Post, :count).by(1)
       end
 
       it "rendirects to post path" do
-        post :create, params: { post: FactoryGirl.attributes_for(:post) }
+        post :create, params: { post: post_valid_params }
         expect(response).to redirect_to post_path(Post.last)
       end
     end
 
     context "with not valid attributes" do
+      let(:post_invalid_params) { FactoryGirl.attributes_for(:post).merge({title: nil}) }
+
       it "not save object to db" do
         expect{
-          post :create, params: { post: FactoryGirl.attributes_for(:post).merge({title: nil}) }
+          post :create, params: { post: post_invalid_params }
         }.to_not change(Post, :count)
       end
 
       it "render new view" do
-        post :create, params: { post: FactoryGirl.attributes_for(:post).merge({title: nil}) }
+        post :create, params: { post: post_invalid_params }
         expect(response).to redirect_to new_post_path
       end
     end

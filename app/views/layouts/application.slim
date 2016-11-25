@@ -21,7 +21,7 @@ html lang="en"
     = render 'layouts/sign_in_cell'
     - if policy(:post).new?
       = link_to 'Create New Post', new_post_path, class: 'btn btn-lg btn-success pull-left create-new-post-button'
-    =link_to root_path, class: 'logo-link' do
+    = link_to root_path, class: 'logo-link' do
       .brand Student's Blog
       .address-bar Very cool blog!
 
@@ -41,13 +41,13 @@ html lang="en"
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav
             li
-              =link_to 'Home', root_path
+              = link_to 'Home', root_path
             li
-              =link_to 'About', root_path
+              = link_to 'About', root_path
             li
-              =link_to 'Blog', posts_path
+              = link_to 'Blog', posts_path
             li
-              =link_to 'Contact', root_path
+              = link_to 'Contact', root_path
     .container.main-content
       = yield
     footer

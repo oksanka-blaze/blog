@@ -7,22 +7,20 @@ class PostPolicy
   end
 
   def create?
-    user
+    !!user
   end
 
   def new?
-    user
+    !!user
   end
 
   def update?
-    user
   end
 
   def edit?
-    user
   end
 
   def destroy?
-    user
   end
+
 end

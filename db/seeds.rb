@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = FactoryGirl.create(:user)
-FactoryGirl.create_list(:post, 40, user: user )
+FactoryGirl.create_list(:post, 40, user: user)

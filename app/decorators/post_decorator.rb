@@ -4,4 +4,8 @@ class PostDecorator < Draper::Decorator
   def author_name
     user.decorate.display_name
   end
+
+  def formatted_created_at
+    created_at.strftime('%d %b %Y %H:%M ')
+  end
 end

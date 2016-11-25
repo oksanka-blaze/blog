@@ -1,6 +1,6 @@
 .row
   = flash_messages
-=render @posts
+= render @posts
 
 .row.paginate-row.text-right
   = will_paginate @posts, renderer: BootstrapPagination::Rails, previous_label: '←', next_label: '→'

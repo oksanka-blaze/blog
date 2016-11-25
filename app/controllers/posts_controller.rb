@@ -2,13 +2,14 @@ class PostsController < ApplicationController
   after_action :verify_authorized, only: [:new, :create, :destroy, :update]
 
   def index
-    @posts = Post.all
-                 .order(created_at: :desc)
-                 .paginate(:page => params[:page], :per_page => 20)
+    @posts = Post.latest
+                 .includes(:user)
+                 .paginate(page: params[:page], per_page: 20)
+                 .decorate
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find(params[:id]).decorate
   end
 
   def new
