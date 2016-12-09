@@ -40,7 +40,7 @@ RSpec.describe PostsController, type: :controller do
     let(:user) { FactoryGirl.create(:user) }
 
     before do
-      login_user(user, signin_path)
+      login_user(user, sign_in_path)
     end
 
     it "render new post page" do
@@ -48,7 +48,7 @@ RSpec.describe PostsController, type: :controller do
       expect(response).to render_template :new
     end
 
-    context "with valid attributes" do
+    context "with valid attributes for post create action" do
       let(:post_valid_params) { FactoryGirl.attributes_for(:post) }
 
       it "creates new object" do
@@ -63,7 +63,7 @@ RSpec.describe PostsController, type: :controller do
       end
     end
 
-    context "with not valid attributes" do
+    context "with not valid attributes for post create action" do
       let(:post_invalid_params) { FactoryGirl.attributes_for(:post).merge({title: nil}) }
 
       it "not save object to db" do
@@ -77,5 +77,24 @@ RSpec.describe PostsController, type: :controller do
         expect(response).to redirect_to new_post_path
       end
     end
+
+    context "post#delete" do
+      let!(:current_user_post) { create(:post, user: user)}
+      let(:not_current_user_post) { create(:post)}
+
+      it "delete own posts" do
+        expect{
+          delete :destroy, params: { id: current_user_post.id  }
+        }.to change(Post, :count)
+      end
+
+      it "can't delete NOT own posts" do
+        delete :destroy, params: { id: not_current_user_post.id }
+        expect(response).to redirect_to root_path
+      end
+
+    end
+
+
   end
 end

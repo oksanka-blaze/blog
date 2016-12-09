@@ -1,0 +1,37 @@
+fr:
+ activerecord:
+  errors:
+    messages:
+      # Default messages: complete sentences
+      inclusion: "%{attribute} n'est pas inclus dans la liste"
+      exclusion: "%{attribute} est réservé"
+      invalid: "%{attribute} est invalide"
+      confirmation: "%{attribute} ne correspond pas à la confirmation"
+      accepted: "%{attribute} doit être accepté"
+      empty: "%{attribute}   ne peut pas être vide"
+      blank: "%{attribute} ne peut pas être vide"
+      too_long: "%{attribute} est trop long (maximum is %{count} characters)"
+      too_short: "%{attribute} est trop court (minimum is %{count} characters)"
+      wrong_length: "%{attribute} est la mauvaise longueur (should be %{count} characters)"
+      taken: "%{attribute} a déjà été pris"
+      not_a_number: "%{attribute} n'est pas un nombre"
+      greater_than: "%{attribute} doit être supérieur à %{count}"
+      greater_than_or_equal_to: "%{attribute} doit être supérieur ou égal à %{count}"
+      equal_to: "%{attribute} doit être égal à %{count}"
+      less_than: "%{attribute} doit être inférieur à %{count}"
+      less_than_or_equal_to: "%{attribute}  doit être inférieur ou égal à %{count}"
+      odd: "%{attribute} doit être impair"
+      even: "%{attribute} doit être pair"
+
+  models:
+    post: "Post"
+  attributes:
+    post:
+      title: "Titre"
+      body: "Corps"
+    user:
+      email: "Courriel"
+      first_name: "Prénom"
+      last_name: "Nom"
+      password: 'Mot de passe'
+      password_confirmation: 'Confirmation de mot de passe'

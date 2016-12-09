@@ -1,0 +1,37 @@
+ru:
+  activerecord:
+    errors:
+      messages:
+        # Default messages: complete sentences
+        inclusion: "%{attribute}  не входит в список"
+        exclusion: "%{attribute} зарезервирован"
+        invalid: "%{attribute} является недействительным"
+        confirmation: "%{attribute} не соответствует"
+        accepted: "%{attribute} должен быть принят"
+        empty: "%{attribute} не может быть пустым"
+        blank: "%{attribute} должно быть заполнено"
+        too_long: "%{attribute} слишком длинный (maximum is %{count} characters)"
+        too_short: "%{attribute} слишком короткий (minimum is %{count} characters)"
+        wrong_length: "%{attribute} имеет неправильную длину (should be %{count} characters)"
+        taken: "%{attribute} уже занятый"
+        not_a_number: "%{attribute}  не является числом"
+        greater_than: "%{attribute} должно быть больше, чем %{count}"
+        greater_than_or_equal_to: "%{attribute} должно быть больше или равно %{count}"
+        equal_to: "%{attribute} должен быть равен %{count}"
+        less_than: "%{attribute} должен быть меньше, чем %{count}"
+        less_than_or_equal_to: "%{attribute} должен быть меньше или равен %{count}"
+        odd: "%{attribute} должно быть нечетным"
+        even: "%{attribute} должно быть четным"
+
+    models:
+      post: "Пост"
+    attributes:
+      post:
+        title: "Заголовок"
+        body: "Текст"
+      user:
+        email: "Электронная почта"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'

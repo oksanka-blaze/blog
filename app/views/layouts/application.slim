@@ -19,11 +19,13 @@ html lang="en"
       | <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   body
     = render 'layouts/sign_in_cell'
+
     - if policy(:post).new?
-      = link_to 'Create New Post', new_post_path, class: 'btn btn-lg btn-success pull-left create-new-post-button'
+      = link_to t('views.layout.create_new_post_button'), new_post_path, class: 'btn btn-lg btn-success pull-left create-new-post-button'
+    = render 'layouts/switch_languages'
     = link_to root_path, class: 'logo-link' do
-      .brand Student's Blog
-      .address-bar Very cool blog!
+      .brand= t('views.layout.project_name')
+      .address-bar= t('views.layout.project_description')
 
     /! Navigation
     nav.navbar.navbar-default role="navigation"
@@ -41,17 +43,15 @@ html lang="en"
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav
             li
-              = link_to 'Home', root_path
+              = link_to t('views.layout.menu.home'), root_path
             li
-              = link_to 'About', root_path
+              = link_to t('views.layout.menu.blog'), posts_path
             li
-              = link_to 'Blog', posts_path
-            li
-              = link_to 'Contact', root_path
+              = link_to t('views.layout.menu.about'), about_index_path
     .container.main-content
       = yield
     footer
       .container
         .row
           .col-lg-12.text-center
-            p= "Copyright &copy; Students Lyon 2 #{Date.current.year}".html_safe
+            p=  "#{t('views.layout.copyright')} #{Date.current.year}".html_safe

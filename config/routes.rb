@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :welcome, only: [:index]
+  scope "(:locale)", locale: /en|ru|fr/ do
+    resources :welcome, only: [:index]
+    resources :about, only: [:index]
 
-  resources :users, only: [:new,:create]
-  resources :sessions
+    resources :users, only: [:new, :create]
+    resources :sessions
 
-  resources :posts
+    resources :posts
 
-  get "logout" => "sessions#destroy", :as => "logout"
-  get "signin" => "sessions#new", :as => "signin"
-  get "signup" => "users#new", :as => "signup"
+    get "logout" => "sessions#destroy", :as => "logout"
+    get "signin" => "sessions#new", :as => "sign_in"
+    get "signup" => "users#new", :as => "sign_up"
 
-  root 'welcome#index'
+    root 'welcome#index'
+  end
 end

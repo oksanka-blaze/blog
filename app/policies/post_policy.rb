@@ -3,7 +3,7 @@ class PostPolicy
 
   def initialize(user, post)
     @user = user
-    @record = post
+    @post = post
   end
 
   def create?
@@ -21,6 +21,7 @@ class PostPolicy
   end
 
   def destroy?
+    !!user && user == post.author
   end
 
 end

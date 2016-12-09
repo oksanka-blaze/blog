@@ -1,0 +1,36 @@
+ru:
+  date:
+    month_names: [~, Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь]
+    abbr_month_names: [~, Янв, Февр, Март, Апр, Май, Июнь, Июль, Авг, Сент, Окт, Нояб, Дек]
+
+  time:
+    formats:
+      general: '%d %b %Y %H:%M '
+
+  languages_tooltip:
+    russian: 'Русский'
+    english: 'Английский'
+    french: 'Французский'
+
+  flash:
+    application:
+      alert:
+        not_authorized: "Вы не авторизованы для выполнения этого действия!"
+
+    users:
+      notice:
+        signed_up: 'Вы зарегистрированы!'
+
+    sessions:
+      notice:
+        logged_in: 'Вы вошли в систему!'
+        logged_out: 'Вы вышли из системы!'
+      alert:
+        error_login: 'E-mail или пароль недействителен'
+
+    posts:
+      notice:
+        post_created: 'Статья успешно создана!'
+        post_deleted: 'Статья успешно удалена!'
+      alert:
+        error_delete_post: "Не удалось удалить запись."

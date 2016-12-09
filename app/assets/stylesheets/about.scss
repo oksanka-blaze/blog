@@ -1,0 +1,41 @@
+.about {
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  .about-person {
+    padding-left: 25px;
+  }
+  hr.contacts-hr {
+    width: 350px;
+    margin-left: 15px;
+  }
+  .contacts {
+    padding-left: 25px;
+
+    .mail, .skype {
+      margin-bottom: 5px;
+
+      img {
+        height: 25px;
+        padding-right: 7px;
+      }
+    }
+
+    .skype {
+      margin-bottom: 10px;
+    }
+    .social-links img {
+      height: 45px;
+      padding-right: 10px;
+    }
+
+  }
+  hr.after-contact-hr {
+    margin-left: 0;
+    max-width: 1110px;
+  }
+
+  .about-project {
+    padding-bottom: 20px;
+  }
+}
