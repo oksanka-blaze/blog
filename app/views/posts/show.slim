@@ -9,4 +9,11 @@
       span.created-by-title-post Created By:&nbsp;
       span= @post.author_name
     .created-at-post.pull-right
-      = @post.formatted_created_at
+      = l @post.created_at, format: :general
+    - if policy(@post).destroy?
+      = link_to post_path(@post),
+              method: :delete,
+              class: 'delete-post-link',
+              'data-confirm' => t('views.post.confirm_deleting') do
+        span.glyphicon.glyphicon-trash
+        span Delete Post

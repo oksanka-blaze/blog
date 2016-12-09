@@ -13,3 +13,14 @@
 
   }
 }
+
+.delete-post-link {
+  float: left;
+  clear: both;
+  margin-top: 7px;
+  margin-bottom: -15px;
+
+  span.glyphicon.glyphicon-trash {
+    margin-right: 4px;
+  }
+}

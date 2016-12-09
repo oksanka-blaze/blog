@@ -1,0 +1,61 @@
+ru:
+  views:
+    defaults:
+      action:
+        create: 'Создать'
+        update: 'Обновить'
+        destroy: 'Удалить'
+        new: 'Новый'
+        cancel: 'Отменить'
+
+    layout:
+      project_name: "Блог студентов MBA"
+      project_description: "Блог студентов французской программы"
+      copyright: "Все права защищены © Студенты Лион 2"
+      create_new_post_button: "Создать новую запись"
+      menu:
+        home: "Главная"
+        about: "О нас"
+        blog: "Блог"
+      sign_in_cell:
+        logged_in_as: "Вы вошли как as&nbsp;"
+      auth_actions:
+        sign_out: "Выход из системы"
+        sign_up: "Зарегистрироваться"
+        sign_in: "Войти в систему"
+        or: "&nbsp;or&nbsp;"
+
+    welcome:
+      show_more_button: 'Показать больше'
+
+    post:
+      created_by: "Создано:&nbsp;"
+      create_new_title: "Создать новый пост"
+      confirm_deleting: "Вы действительно хотите удалить этот пост?"
+      placeholder:
+        title: 'Добавьте заголовок вашего поста сдесь...'
+        body: 'Добавьте текс вашего поста сдесь...'
+
+    user:
+      new:
+        sign_up_title: "Зарегистрироваться"
+        sign_up_button: "Зарегистрироваться"
+
+    sign_in:
+      sign_in_title: "Войти в систему"
+      sign_in_button: "Войти в систему"
+      email: 'Электронный адрес'
+      password: 'Пароль'
+      placeholder:
+        email: 'Введите адрес вашей электронной почты...'
+        password: 'Введите ваш пароль...'
+
+    about:
+      page_title: 'Наша команда'
+      team:
+        vlad: 'Владислав Беляев'
+        vlad_role: 'разработчик Ruby On Rails'
+        oksana: 'Оксана Душенковская'
+        oksana_role: 'DevOps'
+        yuliia: 'Юлия Яценко'
+        yuliia_role: 'Менеджер'

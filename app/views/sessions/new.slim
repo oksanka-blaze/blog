@@ -2,9 +2,9 @@
   = flash_messages
 .row
   .box.small-box
-    h1.text-center Sign In
+    h1.text-center= t('views.sign_in.sign_in_title')
     = bootstrap_form_tag url: sessions_path, method: :post, html: { class: 'sign-in-form' } do |f|
-      = f.email_field :email
-      = f.password_field :password
+      = f.email_field :email, label: t('views.sign_in.email'), placeholder: t('views.sign_in.placeholder.email')
+      = f.password_field :password, label: t('views.sign_in.password'), placeholder: t('views.sign_in.placeholder.password')
       br
-      = f.submit 'Sign In', class: 'btn btn-success col-xs-12 '
+      = f.submit t('views.sign_in.sign_in_button'), class: 'btn btn-success col-xs-12 '

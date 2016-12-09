@@ -2,10 +2,10 @@
   = flash_messages
 .row.new-post-page
   .box.small-box
-    h1.text-center Create New Post
+    h1.text-center= t('views.post.create_new_title')
     = bootstrap_form_for @post, html: { class: 'posts-form' } do |f|
-      = f.text_field :title, placeholder: 'Add your post title here...', minlength: 2, maxlength: 255
-      = f.text_area :body, placeholder: 'Add your post body here...', minlength: 10, maxlength: 6555
+      = f.text_field :title, placeholder: t('views.post.placeholder.title'), minlength: 2, maxlength: 255
+      = f.text_area :body, placeholder: t('views.post.placeholder.body'), minlength: 10, maxlength: 6555
       br
-      = f.submit 'Create', class: 'btn btn-success'
-      = link_to 'Cancel', posts_path, class: 'btn btn-danger cancel-btn'
+      = f.submit t('views.defaults.action.create'), class: 'btn btn-success'
+      = link_to t('views.defaults.action.cancel'), posts_path, class: 'btn btn-danger cancel-btn'

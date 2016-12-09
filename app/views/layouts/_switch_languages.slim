@@ -1,0 +1,7 @@
+.switch-languages.pull-right
+  = link_to url_for(locale: 'ru'), title: t('languages_tooltip.russian') do
+    = image_tag 'blank.png', class: "flag flag-ru", alt: "Russian"
+  = link_to url_for(locale: 'fr'), title: t('languages_tooltip.french') do
+    = image_tag 'blank.png', class: "flag flag-fr", alt: "French"
+  = link_to url_for(locale: 'en'), title: t('languages_tooltip.english') do
+    = image_tag 'blank.png', class: "flag flag-gb", alt: "English"

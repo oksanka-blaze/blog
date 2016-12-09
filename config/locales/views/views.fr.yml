@@ -1,0 +1,60 @@
+fr:
+  views:
+    defaults:
+      action:
+        create: 'Créer'
+        update: 'Rénover'
+        destroy: 'Eloigner'
+        new: 'Nouveau'
+        cancel: 'Annuler'
+    layout:
+      project_name: "Blog des étudiants MBA"
+      project_description: "Le blog des étudiants du programme français"
+      copyright: "Copyright © Étudiants Lyon 2"
+      create_new_post_button: "Créer un nouveau message"
+      menu:
+        home: "Accueil"
+        about: "À propos de nous"
+        blog: "Blog"
+      sign_in_cell:
+        logged_in_as: "Connexion en as&nbsp;"
+      auth_actions:
+        sign_out: "Se déconnecter"
+        sign_up: "S'inscrire"
+        sign_in: "Connexion"
+        or: "&nbsp;or&nbsp;"
+
+    welcome:
+      show_more_button: 'Afficher plus'
+
+    post:
+      created_by: "Créé par:&nbsp;"
+      create_new_title: "Créer un nouveau message"
+      confirm_deleting: "Voulez-vous vraiment supprimer ce message?"
+      placeholder:
+        title: 'Ajouter votre titre de poste ici ...'
+        body: 'Ajouter votre corps post ici...'
+
+    user:
+      new:
+        sign_up_title: "S'inscrire"
+        sign_up_button: "S'inscrire"
+
+    sign_in:
+      sign_in_title: "Connexion"
+      sign_in_button: "Connexion"
+      email: 'Courriel'
+      password: 'Mot de passe'
+      placeholder:
+        email: 'Entrez votre Courriel ici...'
+        password: 'Entrez votre mot de passe ici...'
+
+    about:
+      page_title: 'Notre équipe'
+      team:
+        vlad: 'Vladislav Beliaiev'
+        vlad_role: 'Développeur Ruby On Rails'
+        oksana: 'Dushenkivska Oksana'
+        oksana_role: 'DevOps'
+        yuliia: 'Yuliia Yatsenko'
+        yuliia_role: 'Manager'

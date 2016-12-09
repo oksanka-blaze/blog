@@ -1,0 +1,37 @@
+en:
+  date:
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+
+  time:
+    formats:
+      general: '%d %b %Y %H:%M '
+
+  languages_tooltip:
+    russian: 'Russian'
+    english: 'English'
+    french: 'French'
+
+  flash:
+    application:
+      alert:
+        not_authorized: "You are not authorized to perform this action."
+
+    users:
+      notice:
+        signed_up: 'Signed up!'
+
+    sessions:
+      notice:
+        logged_in: 'Logged in!'
+        logged_out: 'Logged out!'
+      alert:
+        error_login: 'Email or password was invalid'
+
+    posts:
+      notice:
+        post_created: 'Post successfully created!'
+        post_deleted: 'Post successfully deleted!'
+      alert:
+        error_delete_post: "Couldn't delete post."
+

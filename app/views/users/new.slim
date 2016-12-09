@@ -2,11 +2,11 @@
   = flash_messages
 .row
   .box.small-box
-    h1.text-center Sign Up
+    h1.text-center= t('views.user.new.sign_up_title')
     = bootstrap_form_for(@user, html: { class: 'sign-up-form' }) do |f|
       = f.email_field :email
       = f.text_field :first_name
       = f.text_field :last_name
       = f.password_field :password
       = f.password_field :password_confirmation
-      = f.submit "Sign Up", class: 'btn btn-success'
+      = f.submit t('views.user.new.sign_up_button'), class: 'btn btn-success'
