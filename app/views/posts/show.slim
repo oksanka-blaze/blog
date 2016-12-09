@@ -10,7 +10,7 @@
       span= @post.author_name
     .created-at-post.pull-right
       = l @post.created_at, format: :general
-    -if policy(@post).destroy?
+    - if policy(@post).destroy?
       = link_to post_path(@post),
               method: :delete,
               class: 'delete-post-link',
