@@ -5,7 +5,7 @@
       .post-content
         = truncate(post.body, length: 350)
       .created-by-post.pull-left
-        span.created-by-title-post Created By:&nbsp;
+        span.created-by-title-post= t('views.post.created_by').html_safe
         span= post.author_name
       .created-at-post.pull-right
-        = post.formatted_created_at
+        = l post.created_at, format: :general

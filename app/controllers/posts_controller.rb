@@ -21,9 +21,9 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     authorize @post
     if @post.save
-      redirect_to post_path(@post), notice: 'Post successfully created!'
+      redirect_to post_path(@post), notice: t('flash.posts.notice.post_created')
     else
-      redirect_to new_post_path, alert: @post.errors.full_messages.join(', ')
+      redirect_to new_post_path, alert: @post.errors.values.join(', ')
     end
   end
 
@@ -31,6 +31,14 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:id])
+    authorize @post
+
+    if @post.destroy
+      redirect_to posts_path, notice: t('flash.posts.notice.post_deleted')
+    else
+      redirect_to post_path(@post), alert: t('flash.posts.notice.error_delete_post')
+    end
   end
 
   private

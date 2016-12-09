@@ -6,4 +6,6 @@ class Post < ApplicationRecord
   validates :user_id, presence: true
 
   scope :latest, -> { order(updated_at: :desc) }
+
+  alias_method :author, :user
 end

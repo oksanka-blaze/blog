@@ -13,3 +13,4 @@ config/database.yml
 /tmp/*
 !/log/.keep
 .idea/
+.DS_Store

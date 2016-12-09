@@ -1,0 +1,60 @@
+en:
+  views:
+    defaults:
+      action:
+        create: 'Create'
+        update: 'Update'
+        destroy: 'Delete'
+        new: 'New'
+        cancel: 'Cancel'
+    layout:
+      project_name: "MBA Student's Blog"
+      project_description: "French program student's blog"
+      copyright: "Copyright © Students Lyon 2"
+      create_new_post_button: "Create New Post"
+      menu:
+        home: "Home"
+        about: "About Us"
+        blog: "Blog"
+      sign_in_cell:
+        logged_in_as: "Logged in as&nbsp;"
+      auth_actions:
+        sign_out: "Sign Out"
+        sign_up: "Sign Up"
+        sign_in: "Sign In"
+        or: "&nbsp;or&nbsp;"
+
+    welcome:
+      show_more_button: 'Show More'
+
+    post:
+      created_by: "Created By:&nbsp;"
+      create_new_title: "Create New Post"
+      confirm_deleting: "Do you really want to remove this post?"
+      placeholder:
+        title: 'Add your post title here...'
+        body: 'Add your post body here...'
+
+    user:
+      new:
+        sign_up_title: "Sign Up"
+        sign_up_button: "Sign Up"
+
+    sign_in:
+      sign_in_title: "Sign In"
+      sign_in_button: "Sign In"
+      email: 'Email'
+      password: 'Password'
+      placeholder:
+        email: 'Enter your email here...'
+        password: 'Enter your password here...'
+
+    about:
+      page_title: 'Our Team'
+      team:
+        vlad: 'Vladislav Beliaiev'
+        vlad_role: 'Ruby On Rails Developer'
+        oksana: 'Dushenkivska Oksana'
+        oksana_role: 'DevOps'
+        yuliia: 'Yuliia Yatsenko'
+        yuliia_role: 'Manager'

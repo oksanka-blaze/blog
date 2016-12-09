@@ -1,0 +1,36 @@
+fr:
+  date:
+    month_names: [~, Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Août, Septembre, Octobre, Novembre, Décembre]
+    abbr_month_names: [~, Janv, Févr, Mars, Avril, Mai, Juin, Juil, Août, Sept, Oct, Nov, Déc]
+
+  time:
+    formats:
+      general: '%d %b %Y %H:%M '
+
+  languages_tooltip:
+    russian: 'Russe'
+    english: 'Anglais'
+    french: 'Français'
+
+  flash:
+    application:
+      alert:
+        not_authorized: "Vous n'êtes pas autorisé à effectuer cette action."
+
+    users:
+      notice:
+        signed_up: 'Inscrit!'
+
+    sessions:
+      notice:
+        logged_in: 'Connecté!'
+        logged_out: 'Déconnecté!'
+      alert:
+        error_login: 'E-mail ou mot de passe non valide'
+
+    posts:
+      notice:
+        post_created: 'Message créé avec succès!'
+        post_deleted: 'Message supprimé avec succès!'
+      alert:
+        error_delete_post: "Impossible de supprimer la publication."

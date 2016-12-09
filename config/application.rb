@@ -18,5 +18,7 @@ module Blog
       g.assets = false
       g.helper = false
     end
+
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{yml}')]
   end
 end
