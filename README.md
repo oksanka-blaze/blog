@@ -1,24 +1,17 @@
-# README
+# Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Create database
 
-Things you may want to cover:
+Copy config/database.example.yml to config/database.yml and add user and password fields used by postgresql.
 
-* Ruby version
+Then run
 
-* System dependencies
+  `rake db:create && rake db:migrate`
 
-* Configuration
+* Deployment
 
-* Database creation
+Deploy is running automatically for staging and production branches through CircleCI.
 
-* Database initialization
+* Setting up the server
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To install all required software on server, use this project: https://github.com/oksanka-blaze/ansible
